@@ -22,13 +22,14 @@
     angular.module('blocItOff').controller('HomeCtrl', ['$firebaseArray', HomeCtrl]);
 })();
 //temporary add function:
-/* taskList.$add({
-     date: new Date().getTime()
-     , description: "test3"
-     , priority: "high"
-     , state: "completed"
- , });
- taskList.$add(); */
+/*
+        taskList.$add({
+            date: new Date().getTime()
+            , description: "test5"
+            , priority: "high"
+            , state: "completed"
+        , });
+        taskList.$add(); */
 /*
 (function () {
     function HomeCtrl($firebaseArray) {
