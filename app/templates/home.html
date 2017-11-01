@@ -1,4 +1,5 @@
 <div id="taskList">
     <div id=title>Current Tasks</div>
-    <div ng-repeat="txt in home.fetchTasks()">{{txt.$value}}</div>
+    <div ng-repeat="task in home.fetchTasks()" ng-hide="home.oldAndCompletedTasks(task, $index)">{{task.description}}</div>
 </div>
+<button ng
