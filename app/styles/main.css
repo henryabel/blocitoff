@@ -22,3 +22,16 @@ div#taskList #title {
     background-color: dimgray;
     font-size: 4vh;
 }
+
+nav {
+    text-align: right;
+    background-color: white;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+.inactive {
+    text-decoration: line-through;
+}

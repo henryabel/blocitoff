@@ -1,1 +1,2 @@
-<div>test</div>
+<div id=title>Task History</div>
+<div class="inactive" ng-repeat="task in history.fetchTasks()" ng-show="history.oldAndCompletedTasks(task, $index)">{{task.description}}</div>

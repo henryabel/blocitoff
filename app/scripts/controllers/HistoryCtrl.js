@@ -1,11 +1,13 @@
 (function () {
-    console.log("outer function"); //works
-    function HistoryCtrl($firebaseArray) {
-        console.log("inner function"); //doesn't work
+    function HistoryCtrl(FireArray) {
+        var vm = this;
+        vm.fetchTasks = function () {
+            return FireArray.all;
+        };
+        vm.oldAndCompletedTasks = function (task, index) {
+            return FireArray.sortTasks(task, index);
+        };
     }
-    angular.module('blocItOff').controller('HistoryCtrl', ['$firebaseArray', HistoryCtrl]);
+    angular.module('blocItOff').controller('HistoryCtrl', ['FireArray'
+        , HistoryCtrl]);
 })();
-/*vm = this;
-var ref = firebase.database().ref().child("tasks");
-var taskList = $firebaseArray(ref);
-console.log(taskList);*/
