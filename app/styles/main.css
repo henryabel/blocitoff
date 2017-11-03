@@ -10,7 +10,6 @@ div#taskList {
 div#taskList div {
     margin: 0;
     padding-left: 1em;
-    width: 100;
     background-color: lightgray;
     height: 7%;
     border: .001em solid white;
@@ -34,4 +33,24 @@ nav a {
 
 .inactive {
     text-decoration: line-through;
+}
+
+div#newTask {
+    padding: 0;
+    background-color: pink;
+}
+
+div#newTask input,
+div#newTask select {
+    width: 40%;
+    margin-bottom: 50%;
+}
+
+div#columnTitles p {
+    display: inline;
+    font-size: 0.8em;
+}
+
+.priority {
+    margin-left: 18%;
 }

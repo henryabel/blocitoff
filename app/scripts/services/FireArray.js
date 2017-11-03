@@ -16,6 +16,26 @@
             if (task.state == "expired" || task.state == "completed") return true;
             else return false;
         };
+        FireArray.add = function (taskName, priority) {
+            //console.log(taskList);
+            function convertToNum() {
+                if (priority == "High") {
+                    return 1;
+                }
+                else if (priority == "Medium") {
+                    return 2;
+                }
+                else {
+                    return 3;
+                }
+            }
+            taskList.$add({
+                date: new Date().getTime()
+                , description: taskName
+                , priority: convertToNum()
+                , state: "active"
+            });
+        };
         return FireArray;
     }
     angular.module('blocItOff').factory('FireArray', ['$firebaseArray', FireArray]);
