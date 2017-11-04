@@ -13,5 +13,5 @@
     <button ng-click="home.addTask()">Add</button>
 </div>
 <div ng-repeat="task in home.fetchTasks() | orderBy:'priority'" ng-hide="home.activeTasks(task, $index)"> {{task.description}}
-    <complete-task ng-click="$scope"></complete-task>
+    <complete-task></complete-task>
 </div>

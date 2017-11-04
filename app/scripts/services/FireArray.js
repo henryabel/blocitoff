@@ -4,6 +4,11 @@
         var ref = firebase.database().ref().child("tasks");
         var taskList = $firebaseArray(ref);
         FireArray.all = taskList;
+        FireArray.completeTask = function (task) {
+            var index = taskList.$indexFor(task.$id);
+            taskList[index].state = "completed";
+            taskList.$save(index);
+        }
         FireArray.sortTasks = function (task, index) {
             var todaysDate = new Date().getTime();
             var sevenDaysInMilliseconds = 604800000;
@@ -17,7 +22,6 @@
             else return false;
         };
         FireArray.add = function (taskName, priority) {
-            //console.log(taskList);
             function convertToNum() {
                 if (priority == "High") {
                     return 1;

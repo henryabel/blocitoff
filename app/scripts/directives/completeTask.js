@@ -2,11 +2,11 @@
     function completeTask(FireArray) {
         return {
             restrict: 'E'
-            , scope: {}
+            , scope: true
             , templateUrl: '/templates/completeTask.html'
-            , link: function (scope) {
-                scope.test = function (index) {
-                    console.log(index);
+            , link: function (scope, elements, attributes) {
+                scope.completion = function (task) {
+                    FireArray.completeTask(task);
                 };
             }
         };
